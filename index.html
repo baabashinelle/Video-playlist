@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/ign-logo.png" type="image/x-icon" />
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <script>
@@ -18,11 +20,8 @@
     <title>IGN Video Playlists</title>
   </head>
   <body>
-    <nav
-      class="bg-white py-2.5"
-    >
-    
-    <!-- Top Navigation -->
+    <nav class="bg-white py-2.5">
+      <!-- Top Navigation -->
       <div
         class="container flex flex-wrap justify-around items-center mx-auto lg:pt-4 lg:pb-4"
       >
@@ -102,55 +101,65 @@
               >
             </li>
             <li>
-              <a
-                href="#"
-                class="block py-2 pr-4 pl-3 text-black"
-                >Videos</a
-              >
+              <a href="#" class="block py-2 pr-4 pl-3 text-black">Videos</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="block py-2 pr-4 pl-3 text-black"
-                >Reviews</a
-              >
+              <a href="#" class="block py-2 pr-4 pl-3 text-black">Reviews</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="block py-2 pr-4 pl-3 text-black"
-                >Shows</a
-              >
+              <a href="#" class="block py-2 pr-4 pl-3 text-black">Shows</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="block py-2 pr-4 pl-3 text-black"
-                >Wikis</a
-              >
+              <a href="#" class="block py-2 pr-4 pl-3 text-black">Wikis</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="block py-2 pr-4 pl-3 text-black"
-                >More</a
-              >
+              <a href="#" class="block py-2 pr-4 pl-3 text-black">More</a>
             </li>
           </ul>
         </div>
       </div>
 
       <!-- Bottom Navigation -->
-      <div class="bg-[#eee]">
-          <div class="container flex flex-wrap justify-around items-center mx-auto lg:pt-6 lg:pb-6">
-              <div>Kingdom Hearts III</div>
-              <div class="border-l-2 border-[#ccc] pl-[50px]">The Walking Dead</div>
-              <div class="border-l-2 border-[#ccc] pl-[50px]">God Of War</div>
-              <div class="border-l-2 border-[#ccc] pl-[50px]">Marvel's The Avengers: Infinity War</div>
-              <div class="border-l-2 border-[#ccc] pl-[50px]">Super Troopers 2</div>
-              <div class="border-l-2 border-[#ccc] pl-[50px]">Marvel's The Defenders</div>
-      </div>
+      <div class="bg-[#eee] drop-shadow-lg">
+        <div
+          class="container flex flex-wrap justify-around items-center mx-auto lg:pt-6 lg:pb-6"
+        >
+          <div>Kingdom Hearts III</div>
+          <div class="border-l-2 border-[#ccc] pl-[50px]">The Walking Dead</div>
+          <div class="border-l-2 border-[#ccc] pl-[50px]">God Of War</div>
+          <div class="border-l-2 border-[#ccc] pl-[50px]">
+            Marvel's The Avengers: Infinity War
+          </div>
+          <div class="border-l-2 border-[#ccc] pl-[50px]">Super Troopers 2</div>
+          <div class="border-l-2 border-[#ccc] pl-[50px]">
+            Marvel's The Defenders
+          </div>
+        </div>
       </div>
     </nav>
+
+    <!-- Video Area -->
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2">
+        <div class="lg:pt-5">
+          <video controls class="rounded w-full">
+            <source
+              src="https://www.youtube.com/watch?v=oZ6iiRrz1SY"
+              type="video/mp4"
+            />
+          </video>
+          <div>
+            <h1 class="lg:text-3xl font-bold pt-3 pb-2">The Last Of Us Part II Review</h1>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptas, ratione provident illum alias, modi inventore,
+              consectetur exercitationem itaque cum eius tempora consequatur et
+              rem soluta neque. Voluptatibus quaerat dignissimos aperiam cum
+              itaque quia eius reprehenderit!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
