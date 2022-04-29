@@ -72,7 +72,7 @@ for (let i = 1; i <= 4; i++) {
 }
 subvideos.innerHTML = output;
 // Append the btn
-let readmorebtn = `<div class="pt-4">
+let readmorebtn = `<div class="pt-8">
             <button
               class="bg-red-700 lg:w-1/2 w-full h-10 rounded-md lg:h-10 text-white font-semibold"
             >
