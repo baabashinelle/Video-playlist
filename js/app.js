@@ -58,7 +58,7 @@ function videoPlayer(video)
 let output = ""
 for (let i = 1; i <= 4; i++) {
     let video = PLAYLIST[i]
-    output += `<div class="lg:flex ${i < 3 ? "border-b-2": ''} border-[#ccc] ${i < 4? "pb-3":""} ${i > 0 ? "pt-3":""}">
+    output += `<div class="lg:flex ${i < 4 ? "border-b-2": ''} border-[#ccc] ${i < 4? "pb-3":""} ${i > 0 ? "pt-3":""}">
               <video poster = "${
                 video.thumbnails[2].url
               }" class="rounded-md lg:w-[180px] md:w-[500px]">
