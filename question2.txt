@@ -1,0 +1,5 @@
+1. First of all, a survey will be made for all the loads in the village to obtain the power consumption capacity of each of them.
+2. The individual power capacity will be summed up to get the total power capacity. Based on the total power capacity, the power consumption of the entire village will be determined.
+3. Upon determining the power consumption of the entire village, a simulation can be made that in case all these loads are on at the same time, will there be enough power supply for it?
+4. So for the total capacity of the load that was obtained, a system will be designed to be slightly higher than it since part of it may be lost to energy loss. For example, if the total capacity of the system will be X Watts, about 20 percent more of X will be added to the system to account for the loss hence the system would be 0.2X Watts.
+5. Therefore, a number of voltorbs that will be needed to get 0.2X Watts would be caught to fully power the village.
