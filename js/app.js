@@ -1,29 +1,31 @@
 // CONSTANTS
+const menu = document.getElementById("menu");
+const ulMenu = document.getElementById("ulMenu");
+const btn = document.getElementById("btn");
 const initload = document.getElementById("init");
 const subvideos = document.getElementById("subs");
-// const currently_playing = 
-const PLAYLIST = await fetchVideos();
 
-
-videoPlayer(PLAYLIST[0]);
-document.getElementById("currently_playing").addEventListener("ended", () => {
-  loop(0, PLAYLIST);
+//Show and hide hamburguer menu in small screens
+btn.addEventListener("click", function () {
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
 });
 
+// const currently_playing =
+const PLAYLIST = await fetchVideos();
 
-
-
+loop(0, PLAYLIST);
 
 // Function to automatically loop through Videos
-function loop(i, videos, listener = undefined)
-{
-  alert(i)
-  videoPlayer(videos[i])
-  if(i >= videos.length)
-  {
-    i = 0
-  }else{
+function loop(i, videos, listener = undefined) {
+  if (i < videos.length) {
+    videoPlayer(videos[i]);
     i++;
+  } else {
+    i = 0;
   }
   listener = document
     .getElementById("currently_playing")
@@ -32,8 +34,7 @@ function loop(i, videos, listener = undefined)
     });
 }
 
-function videoPlayer(video)
-{
+function videoPlayer(video) {
   let player = `<video autoplay id = "currently_playing" controls poster="${
     video.thumbnails[video.thumbnails.length - 1].url
   }" class="rounded-md w-full" >
@@ -52,18 +53,18 @@ function videoPlayer(video)
   initload.innerHTML = player;
 }
 
-
-
 // DISPLAY SUB VIDEOS
-let output = ""
+let output = "";
 for (let i = 1; i <= 4; i++) {
-    let video = PLAYLIST[i]
-    output += `<div class="lg:flex ${i < 4 ? "border-b-2": ''} border-[#ccc] ${i < 4? "pb-3":""} ${i > 0 ? "pt-3":""}">
+  let video = PLAYLIST[i];
+  output += `<div class="lg:flex ${i < 4 ? "border-b-2" : ""} border-[#ccc] ${
+    i < 4 ? "pb-3" : ""
+  } ${i > 0 ? "pt-3" : ""}">
               <video poster = "${
                 video.thumbnails[2].url
               }" class="rounded-md lg:w-[180px] md:w-[500px]">
                 <source
-                  src="${video.assets[(video.assets.length-1)].url}"
+                  src="${video.assets[video.assets.length - 1].url}"
                   type="video/mp4"
                 />
               </video>
@@ -87,5 +88,3 @@ async function fetchVideos() {
   );
   return await res.data.data;
 }
-
-
